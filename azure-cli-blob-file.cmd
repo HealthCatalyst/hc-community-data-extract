@@ -1,0 +1,1 @@
+az storage blob upload --container-name CONTAINERNAME --file myfile.csv --name BLOBNAME --connection-string DefaultEndpointsProtocol=https;AccountName=ACCOUNTNAME;AccountKey=ACCOUNTKEY;EndpointSuffix=core.windows.net
