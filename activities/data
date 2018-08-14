@@ -1,0 +1,43 @@
+#!/bin/bash
+#
+# Gets data from Jive's Cloud Analytics API
+# See https://community.jivesoftware.com/docs/DOC-99916 for concept
+# See https://community.jivesoftware.com/docs/DOC-152039 for details and script credit
+# Must add `client-id` and `client-secret` files in the same directory (no filetype endings)
+# To find client ID and client secret: https://community.healthcatalyst.com/addon-services!input.jspa?filterID=analyticsServices​ > Cloudalytics Dashboard > View Client ID and Secret
+
+
+[ $# -eq 0 ] && { 
+
+echo "Usage: "
+echo "make a file called client-id which contains the client id in the same folder"
+echo "make a file called client-secret which contains the client secret in the same folder"
+echo "run the jive-data-export-service-simple-query with arguments: start date (require), end date (requried), then any other parameters like filters (optional)"
+echo "./jive-data-export-service-simple-query 2015-02-01 2015-03-01 'filter=user(dirk.mcnealy)' > february-events-by-dirk.csv"
+
+exit 1; }
+
+
+clientid=$(cat client-id)
+
+if [ -z "$clientid" ]
+  then echo "make a file called client-id which contains the client id in this folder"; exit 1;
+fi
+
+clientsecret=$(cat client-secret)
+
+if [ -z "$clientsecret" ]
+  then echo "make a file called client-secret which contains the client secret in this folder"; exit 1;
+fi
+
+after=`date --date="3 years ago" +%FT%T`
+before=`date +%FT%T`
+
+if [ -z "$1" ]
+  then filter=""
+  else filter="&"$1
+fi
+
+session=$(curl -XPOST "https://api.jivesoftware.com/analytics/v1/auth/login?clientId=${clientid}&clientSecret=${clientsecret}")
+
+curl -XGET "https://api.jivesoftware.com/analytics/v2/export/activity/csv?count=all&after=${after}&before=${before}${filter}" -H "Authorization: ${session}"

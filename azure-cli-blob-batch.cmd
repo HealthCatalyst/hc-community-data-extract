@@ -1,0 +1,1 @@
+az storage blob upload-batch --destination BLOBNAME --account-key ACCOUNTKEY --account-name ACCOUNTNAME --connection-string DefaultEndpointsProtocol=https;AccountName=ACCOUNTNAME;AccountKey=ACCOUNTKEY;EndpointSuffix=core.windows.net --source "C:/mydirectory"
