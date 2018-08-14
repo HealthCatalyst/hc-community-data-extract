@@ -2,7 +2,7 @@
 
 Jive is the platform for HC Community. Using the Jive API, more data can be extracted than what is surfaced in the analytics boxed up with Jive. The scripts in this project extract the following:
 
-**contents.sh** - Extracts a JSON file with an object for each discussion, doc, file, idea, poll, post, and video (not included: direct messages, external objects like RSS feed items); includes counts of favorites, likes, views, downloads, etc.
+**contents.sh** - Extracts a JSON file with an object for each discussion, doc, file, idea, poll, post, and video (not included: direct messages, external objects like RSS feed items); includes counts of favorites, likes, views, downloads, etc.; also extracts JSON files for counts of categories and tags
 
 **places.sh** - Extracts a JSON file with an object for each Jive space (aka group or place); includes number of followers and other counts
 
