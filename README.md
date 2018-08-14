@@ -10,6 +10,6 @@ Jive is the platform for HC Community. Using the Jive API, more data can be extr
 
 **people.sh** - Extracts a JSON file with an object for each user; includes number of followers, location, join date, etc.
 
-**too-100-search-terms.sh** - Extracts a JSON file with an object for the top 100 *successful* search terms
+**too-100-search-terms.sh** - Extracts a JSON file with an object for each of the top 100 *successful* search terms
 
 The JSON files are uploaded to an Azure blob with an AZURE CLI script and the blob is connected to a Power BI report.
