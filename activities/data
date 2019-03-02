@@ -1,5 +1,7 @@
 #!/bin/bash
 #
+# Credit to: https://community.jivesoftware.com/docs/DOC-152039 (Dirk McNealy)
+#
 # Gets data from Jive's Cloud Analytics API
 # See https://community.jivesoftware.com/docs/DOC-99916 for concept
 # See https://community.jivesoftware.com/docs/DOC-152039 for details and script credit
