@@ -28,6 +28,9 @@ Extracts a file for each named `placeID` that has an object for each place follo
 ## `/activities` scripts
 A .csv file with an all-time history of activities data can be exported with a script that queries Jive Cloud Analytics. It provides a highly useful detailed record of which actor performed which action when. Follow the instructions at the top of `data`. Execute `data.sh`.
 
+## `/des` scripts
+JSON extracts with various sets of information. Follow the instructions at the top of `des-extracts.sh`.
+
 ## Azure CLI uploads (optional)
 | Script | What it does |
 |--------|--------------|
