@@ -4,7 +4,7 @@
 # See https://community.jivesoftware.com/docs/DOC-99916 for concept
 # See https://community.jivesoftware.com/docs/DOC-152039 for details and script credit
 # Must add `client-id` and `client-secret` files in the same directory (no filetype endings)
-# To find client ID and client secret: https://community.healthcatalyst.com/addon-services!input.jspa?filterID=analyticsServices​ > Cloudalytics Dashboard > View Client ID and Secret
+# To find client ID and client secret: https://<yourinstance.com/addon-services!input.jspa?filterID=analyticsServices​ > Cloudalytics Dashboard > View Client ID and Secret
 
 
 [ $# -eq 0 ] && { 
