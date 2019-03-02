@@ -1,4 +1,4 @@
-# hc-community-data-extract
+# jive-data-extract
 
 Using the Jive API, more data can be extracted than what is surfaced in the analytics boxed up with Jive. Extracting data with the API makes it possible to distinguish customer from employee usage, something the analytics boxed up with Jive does not.
 
