@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# See prerequisites in `des.sh` at root
+# See https://community.jivesoftware.com/docs/DOC-99916#jive_content_id_List_of_All_Data_Export_Events
+# Uses the `activity` endpoint; extracts more information than the `activity/csv` endpoint
+# Usage example: `./des-export-json 2016-01-01 2019-01-01 'filter=name(ACTIVITY_PEOPLE_SEARCH,ACTIVITY_SPOTLIGHT_SEARCH)&directive=silent' > search.json`
+
+clientid=$(cat client-id)
+clientsecret=$(cat client-secret)
+
+after=${1}
+before=${2}
+
+if [ -z "$3" ]
+  then filter=""
+  else filter="&"$3
+fi
+
+session=$(curl -XPOST "https://api.jivesoftware.com/analytics/v1/auth/login?clientId=${clientid}&clientSecret=${clientsecret}")
+
+curl -XGET "https://api.jivesoftware.com/analytics/v2/export/activity?count=all&after=${after}&before=${before}${filter}" -H "Authorization: ${session}"
