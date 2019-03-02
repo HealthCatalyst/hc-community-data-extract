@@ -25,9 +25,11 @@ Remove Azure CLI lines if uploading to an Azure blob is not desired.
 ## `place-followers.sh`
 Extracts a file for each named `placeID` that has an object for each place follower. The JSON returned does not include the `placeID` when returned, which is why these are separated into individual files named with the `placeID`.
 
-## /activities scripts
+## `/activities` scripts
 A .csv file with an all-time history of activities data can be exported with a script that queries Jive Cloud Analytics. It provides a highly useful detailed record of which actor performed which action when. Follow the instructions at the top of `data`. Execute `data.sh`.
 
 ## Azure CLI uploads (optional)
+| Script | What it does |
+|--------|--------------|
 | `azure-cli-blob-file.cmd` | Uploads a file to an Azure blob |
 | `azure-cli-blob-batch.cmd` | Uploads a directory of files to an Azure blob |
