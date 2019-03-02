@@ -1,7 +1,7 @@
 #!/bin/bash
 # JQ required
 # List of placeIDs:
-# https://community.healthcatalyst.com/api/core/v3/places?filter=type(space,group)&fields=-resources,placeID,displayName,-id,-typeCode&count=100&startIndex=0
+# https://<yourinstance>.com/api/core/v3/places?filter=type(space,group)&fields=-resources,placeID,displayName,-id,-typeCode&count=100&startIndex=0
 
 rm bin/space-followers/*
 
